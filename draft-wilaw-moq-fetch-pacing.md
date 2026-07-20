@@ -2,7 +2,7 @@
 title: "MOQT FETCH Pacing"
 category: info
 
-docname: draft-wilaw-moq-pacing-latest
+docname: draft-wilaw-moq-fetch-pacing-latest
 submissiontype: IETF  # also: "independent", "editorial", "IAB", or "IRTF"
 number:
 date:
