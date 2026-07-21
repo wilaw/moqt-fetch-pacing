@@ -4,7 +4,7 @@
 
 This is the working area for the individual Internet-Draft, "MOQT FETCH Pacing".
 
-* [Editor's Copy](https://wilaw.github.io/moqt-pacing/#go.draft-wilaw-moq-fetch-pacing.html)
+* [Editor's Copy](https://wilaw.github.io/moqt-fetch-pacing/)
 * [Datatracker Page](https://datatracker.ietf.org/doc/draft-wilaw-moq-fetch-pacing)
 * [Individual Draft](https://datatracker.ietf.org/doc/html/draft-wilaw-moq-fetch-pacing)
 * [Compare Editor's Copy to Individual Draft](https://wilaw.github.io/moqt-pacing/#go.draft-wilaw-moq-fetch-pacing.diff)
