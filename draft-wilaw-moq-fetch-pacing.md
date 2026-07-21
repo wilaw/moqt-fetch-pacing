@@ -1,6 +1,6 @@
 ---
 title: "MOQT FETCH Pacing"
-category: standards
+category: std
 
 docname: draft-wilaw-moq-fetch-pacing-latest
 submissiontype: IETF
@@ -91,7 +91,7 @@ during SETUP, and to activate that behavior via a new parameter accompanying a F
 {::boilerplate bcp14-tagged}
 
 # FETCH PACING SETUP Extension {#fetch-pacing-setup-extension}
-This draft defines a new MOQT extension, FETCH PACING, negotiated per {{!MOQT}}
+This draft defines a new MOQT extension, FETCH PACING, negotiated per {{MOQT}}
 Section 3.2. Support for the extension is advertised via a new Boolean Setup Option, FETCH_PACING_SUPPORTED,
 included in the SETUP message. An endpoint that implements this specification MUST include
 FETCH_PACING_SUPPORTED in its SETUP message; an endpoint that omits it MUST be treated as not
@@ -121,7 +121,7 @@ success.
 
 If the PACING_RATE parameter is absent, the endpoint MUST deliver Objects using its default,
 unpaced behavior. A client MUST NOT send PACING_RATE unless FETCH Pacing was successfully negotiated in SETUP;
-per Section 3.3 of {{!MOQT}}, sending an unnegotiated Message Parameter risks session termination.
+per Section 3.3 of {{MOQT}}, sending an unnegotiated Message Parameter risks session termination.
 
 The PACING_RATE parameter does not persist across FETCH instances and MUST be repeated with each new FETCH message
 in which pacing is required. Since FETCH provides no update mechanism, the pacing rate cannot be modified or removed
@@ -176,12 +176,12 @@ offer efficient pacing might choose to not offer pacing during SETUP.
 # IANA Considerations
 
 This document requests that IANA add two new entries to registries defined
-in {{!MOQT}}.
+in {{MOQT}}.
 
 ## FETCH_PACING_SUPPORTED Setup Option
 
 IANA is requested to add the following entry to the "Setup Options"
-registry (Section 15.4 of {{!MOQT}}):
+registry (Section 15.4 of {{MOQT}}):
 
 | Type | Name                   | Specification  |
 |------|------------------------|----------------|
@@ -194,7 +194,7 @@ FETCH Pacing extension defined in this document.
 ## PACING_RATE Message Parameter
 
 IANA is requested to add the following entry to the "Message Parameters"
-registry (Section 15.7 of {{!MOQT}}):
+registry (Section 15.7 of {{MOQT}}):
 
 | Parameter Type | Parameter Name | Specification  |
 |----------------|----------------|----------------|
@@ -203,7 +203,7 @@ registry (Section 15.7 of {{!MOQT}}):
 PACING_RATE is a Message Parameter (see {{pacing-rate-message-parameter}}) that a
 client includes in a FETCH message to activate pacing for that request,
 once FETCH_PACING_SUPPORTED has been successfully negotiated per Section 3.2 of
-{{!MOQT}}.
+{{MOQT}}.
 
 
 --- back
