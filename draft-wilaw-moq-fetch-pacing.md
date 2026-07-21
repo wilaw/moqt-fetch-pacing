@@ -3,7 +3,7 @@ title: "MOQT FETCH Pacing"
 category: standards
 
 docname: draft-wilaw-moq-fetch-pacing-latest
-submissiontype: IETF 
+submissiontype: IETF
 number:
 date:
 consensus: true
@@ -111,7 +111,7 @@ scale defined as:
 Base rate (b_min) = 100 Kbps
 Bitrate at value n = b_min * 10^(n/20)
 
-where n is an integer between 0 and 126 represented by the value of the PACING_RATE parameter. 
+where n is an integer between 0 and 126 represented by the value of the PACING_RATE parameter.
 
 An endpoint that receives a FETCH message containing PACING_RATE from a client with which the extension
 was negotiated MUST pace delivery of the requested Objects at approximately the indicated rate. The timebase
@@ -129,7 +129,7 @@ once set. A client wishing to modify the pacing rate MUST cancel their FETCH req
 with the updated pacing value.
 
 A relay MAY propagate a pacing parameter upstream only if it is assured that its downstream clients will FETCH
-that track at that rate or lower. 
+that track at that rate or lower.
 
 ## Bitrate examples
 
@@ -159,11 +159,11 @@ can only send values in the range 0-126 as values outside this range will result
 so range-based attacks are limited.
 
 If a client sets a pacing rate far below the encoded bitrate of the track, for example setting a 100kbps
-limit on an hour of content encoded at 10Mbps, then there will be two consequences: 
+limit on an hour of content encoded at 10Mbps, then there will be two consequences:
 * An edge relay will pull the content to the edge with an upstream fetch, cache it and then release it
-  slowly to the client. This can result in increased cache space pressure on the edge relay. 
+  slowly to the client. This can result in increased cache space pressure on the edge relay.
 * The relay will spend more time delivering content than it otherwise would have, consuming additional
-  resources. 
+  resources.
 
 These scenarios are similar to a client SUBSCRIBING to content with forward=0 and can be mitigated
 by general protective measures. For example, a relay could terminate a FETCH that is taking too
