@@ -81,7 +81,7 @@ download as fast as needed. In the context of Adaptive Bitrate Switching (ABR),
 "as needed" means a rate that avoids triggering unnecessary downward bitrate switches
 while still delivering enough data to allow the client to switch up when appropriate.
 Delivering data at this pace, rather than as fast as possible, has been shown to
-improve throughput and reduce retransmissions and Round-Trip-Time (RTT) ({{SAMMY}}).
+improve throughput and reduce retransmissions and Round-Trip-Time (RTT) {{SAMMY}}.
 
 This draft defines a mechanism for a client to negotiate support for a pacing extension
 during SETUP, and to activate that behavior via a new parameter accompanying a FETCH message.
@@ -105,10 +105,11 @@ PACING_RATE. The value of PACING_RATE is a varint as defined by {{MOQT}} Sect 1.
 This rate signal is an integer in the range (0-126). A value outside of that range MUST result in
 the publisher rejecting the FETCH with a REQUEST_ERROR message.
 
-The rate signal is interpreted as defined in SCONE ({{SCONE}} Section 5.1). The rate follows a logarithmic
+The rate signal is interpreted as defined in SCONE {{SCONE}} Section 5.1. The rate follows a logarithmic
 scale defined as:
 
 Base rate (b_min) = 100 Kbps
+
 Bitrate at value n = b_min * 10^(n/20)
 
 where n is an integer between 0 and 126 represented by the value of the PACING_RATE parameter.
