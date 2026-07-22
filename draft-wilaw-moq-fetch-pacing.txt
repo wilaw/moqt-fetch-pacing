@@ -5,10 +5,10 @@
 Media Over QUIC                                                   W. Law
 Internet-Draft                                                    Akamai
 Intended status: Standards Track                           S. Nandakumar
-Expires: 22 January 2027                                           Cisco
+Expires: 23 January 2027                                           Cisco
                                                                 G. Simon
                                                                Synamedia
-                                                            21 July 2026
+                                                            22 July 2026
 
 
                            MOQT FETCH Pacing
@@ -46,7 +46,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 22 January 2027.
+   This Internet-Draft will expire on 23 January 2027.
 
 Copyright Notice
 
@@ -93,7 +93,7 @@ Table of Contents
    delivering enough data to allow the client to switch up when
    appropriate.  Delivering data at this pace, rather than as fast as
    possible, has been shown to improve throughput and reduce
-   retransmissions and Round-Trip-Time (RTT) ([SAMMY]).
+   retransmissions and Round-Trip-Time (RTT) [SAMMY].
 
    This draft defines a mechanism for a client to negotiate support for
    a pacing extension during SETUP, and to activate that behavior via a
@@ -129,10 +129,12 @@ Table of Contents
    (0-126).  A value outside of that range MUST result in the publisher
    rejecting the FETCH with a REQUEST_ERROR message.
 
-   The rate signal is interpreted as defined in SCONE ([SCONE]
-   Section 5.1).  The rate follows a logarithmic scale defined as:
+   The rate signal is interpreted as defined in SCONE [SCONE]
+   Section 5.1.  The rate follows a logarithmic scale defined as:
 
-   Base rate (b_min) = 100 Kbps Bitrate at value n = b_min * 10^(n/20)
+   Base rate (b_min) = 100 Kbps
+
+   Bitrate at value n = b_min * 10^(n/20)
 
    where n is an integer between 0 and 126 represented by the value of
    the PACING_RATE parameter.
