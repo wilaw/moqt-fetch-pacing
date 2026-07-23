@@ -1,6 +1,6 @@
 {
   "magic": "E!vIA5L86J2I",
-  "timestamp": "2026-07-21T01:25:40.651377+00:00",
+  "timestamp": "2026-07-23T01:44:18.477156+00:00",
   "repo": "wilaw/moqt-fetch-pacing",
   "labels": [
     {
@@ -50,5 +50,85 @@
     }
   ],
   "issues": [],
-  "pulls": []
+  "pulls": [
+    {
+      "number": 1,
+      "id": "PR_kwDOTeMrtM70c05G",
+      "title": "Refine MOQT FETCH Pacing specifications",
+      "url": "https://github.com/wilaw/moqt-fetch-pacing/pull/1",
+      "state": "MERGED",
+      "author": "wilaw",
+      "authorAssociation": "OWNER",
+      "assignees": [],
+      "labels": [],
+      "body": "Updated category to 'standards' and refined pacing definitions. Added FETCH_PACING extension details and clarified security considerations.",
+      "createdAt": "2026-07-21T16:04:08Z",
+      "updatedAt": "2026-07-21T16:43:10Z",
+      "baseRepository": "wilaw/moqt-fetch-pacing",
+      "baseRefName": "main",
+      "baseRefOid": "2f8a0b53455d428ba01e056fea915604090992a9",
+      "headRepository": "wilaw/moqt-fetch-pacing",
+      "headRefName": "wilaw-patch-1",
+      "headRefOid": "b9999085a6770c38ea99cec5475b121baf8a7613",
+      "closedAt": "2026-07-21T16:43:05Z",
+      "mergedAt": "2026-07-21T16:43:05Z",
+      "mergedBy": "wilaw",
+      "mergeCommit": {
+        "oid": "3d061750a006be9422c2596cd6ccde7180a7f08f"
+      },
+      "comments": [],
+      "reviews": [
+        {
+          "id": "PRR_kwDOTeMrtM8AAAABGurJmg",
+          "commit": {
+            "abbreviatedOid": "06c5187"
+          },
+          "author": "github-actions",
+          "authorAssociation": "NONE",
+          "state": "COMMENTED",
+          "body": "",
+          "createdAt": "2026-07-21T16:04:34Z",
+          "updatedAt": "2026-07-21T16:04:35Z",
+          "comments": [
+            {
+              "originalPosition": 120,
+              "body": "````suggestion\n  resources.\n````",
+              "createdAt": "2026-07-21T16:04:34Z",
+              "updatedAt": "2026-07-21T16:04:35Z"
+            },
+            {
+              "originalPosition": 118,
+              "body": "````suggestion\n  slowly to the client. This can result in increased cache space pressure on the edge relay.\n````",
+              "createdAt": "2026-07-21T16:04:34Z",
+              "updatedAt": "2026-07-21T16:04:35Z"
+            },
+            {
+              "originalPosition": 116,
+              "body": "````suggestion\nlimit on an hour of content encoded at 10Mbps, then there will be two consequences:\n````",
+              "createdAt": "2026-07-21T16:04:35Z",
+              "updatedAt": "2026-07-21T16:04:35Z"
+            },
+            {
+              "originalPosition": 85,
+              "body": "````suggestion\nthat track at that rate or lower.\n````",
+              "createdAt": "2026-07-21T16:04:35Z",
+              "updatedAt": "2026-07-21T16:04:35Z"
+            },
+            {
+              "originalPosition": 67,
+              "body": "````suggestion\nwhere n is an integer between 0 and 126 represented by the value of the PACING_RATE parameter.\n````",
+              "createdAt": "2026-07-21T16:04:35Z",
+              "updatedAt": "2026-07-21T16:04:35Z"
+            },
+            {
+              "originalPosition": 8,
+              "body": "````suggestion\nsubmissiontype: IETF\n````",
+              "createdAt": "2026-07-21T16:04:35Z",
+              "updatedAt": "2026-07-21T16:04:35Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
